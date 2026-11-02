@@ -1,0 +1,83 @@
+metric,value
+valuation date,2026-10-30
+7y Treasury par yield,0.048
+HW mean reversion a,0.0145665448198766
+HW sigma,0.0077252589110445
+"martingale test max |z| (1,000 raw paths)",1.9493591941595307
+swaption Jamshidian vs MC max |z|,0.2229568491131687
+policies,10000
+account value,1145834980.67
+model points,716
+"liability value, stochastic",1088604343.0962813
+"liability value, % of AV",0.9500533335609508
+"liability value, deterministic",1070570908.8888532
+dynamic surrender cost,23577836.66468191
+"dynamic surrender cost, % of AV",0.020576991506137583
+static cash flow duration,7.9345130787010785
+effective duration,3.649413407108975
+"effective duration, no dynamic surrender",4.463018226277926
+deterministic effective duration,3.3261973955368047
+effective convexity,88.6844441846137
+"effective convexity, no dynamic surrender",39.29635903505477
+duration at -200 bp,5.544603306841912
+duration at +200 bp,2.36165500764375
+"duration at -200 bp, no dynamic",5.352635396905311
+"duration at +200 bp, no dynamic",4.236017215271692
+static match 2y bond,483639209.12487096
+static match 20y bond,662195771.5451292
+static match asset duration,7.413335272142394
+effective match asset duration,3.4671373729659094
+surplus at t=0,57230637.573718786
+static match surplus change +200 bp,-86011538.63424695
+static match surplus change -200 bp,94570742.0662725
+"static match surplus change +200 bp, no dynamic",-59957396.97053051
+effective match surplus change +200 bp,-10536339.570327282
+effective match surplus change -200 bp,-14882710.633818388
+hedged surplus change +200 bp,-1.1920928955078125e-07
+hedged surplus change -200 bp,66527333.248019695
+VaR static,150068423.26597697
+ES static,170662456.51636487
+ES static CI low,151419976.02573135
+ES static CI high,188475511.81367853
+"VaR static, no dynamic",80882312.67048517
+"ES static, no dynamic",84975509.71397854
+VaR effective,125798755.25822572
+ES effective,214061727.62108824
+ES effective CI low,127690192.98770832
+ES effective CI high,300969965.34678155
+"worst 5 paths with rates up, static",5
+"worst 5 paths with rates up, effective",0
+VaR hedged,128086121.1363551
+ES hedged,141743636.2076842
+ES hedged CI low,130484792.988793
+ES hedged CI high,147499625.5141359
+hedge notional,839725474.508661
+"hedge notional, x AV",0.732850269606581
+hedge premium,24453718.652741816
+"hedge premium, % of AV",0.0213413965058416
+hedge strike,0.0514235140044647
+hedge normal vol (bp),72.51335420146273
+hedge Black vol,0.1412465339541497
+ES reduction from hedge,0.16945039289240305
+VaR reduction from hedge,0.14648186241459382
+"2022 replay impact, static",-129334684.45383084
+"2022 replay impact, hedged",28820524.943603635
+"2022 replay impact, effective",-17927644.147579312
+2022 replay surrenders yr1-3 vs base,0.673564946351221
+2022 replay surrenders yr1-3,459442629.2184384
+2022 replay max rate gap (bp),309.75724666246066
+static match +200 bp loss from dynamic surrender,-26054141.663716435
+base surrenders yr1-3,274529309.5557093
+"+200 path impact, static",-95211614.50447951
+"+200 path impact, hedged",14777176.313961623
+"-200 path impact, static",107045003.38717294
+liability KRD 3-7y share,0.7838937401443838
+static assets KRD 20y share,0.5777025777694621
+"sensitivity: ES, no dynamic",84975509.71397854
+"sensitivity: ES, Academy x2",192367700.84233052
+"sensitivity: duration, new money crediting",1.706566333813961
+paths with a negative 3m rate within 10y,0.012
+paths with a negative 3m rate within 30y,0.085
+effective match worst 5 with negative rates within 10y,3.0
+"hedge alternatives: ES reduction per premium, 2y",1.1825939735116004
+"hedge alternatives: ES reduction per premium, 5y",0.9081667807591562
