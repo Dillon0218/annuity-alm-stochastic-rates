@@ -1,2 +1,2 @@
-share_negative_within_10y,share_negative_within_30y,effective_match_worst5_negative_within_10y
-0.012,0.085,3
+share_negative_within_10y,share_negative_within_30y,effective_match_worst5_negative_within_10y,effective_match_worst5_av_at_floor_y15_min,effective_match_worst5_av_at_floor_y15_max
+0.012,0.085,3,0.5053470325032471,1.0

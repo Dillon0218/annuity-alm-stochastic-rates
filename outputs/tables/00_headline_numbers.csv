@@ -79,5 +79,8 @@ static assets KRD 20y share,0.5777025777694621
 paths with a negative 3m rate within 10y,0.012
 paths with a negative 3m rate within 30y,0.085
 effective match worst 5 with negative rates within 10y,3.0
+"effective match worst 5, AV at minimum rate in year 15, min",0.5053470325032471
+"effective match worst 5, AV at minimum rate in year 15, max",1.0
+"30y discount factor sampling error, 1,000 raw paths (bp of price)",130.70222975667144
 "hedge alternatives: ES reduction per premium, 2y",1.1825939735116004
 "hedge alternatives: ES reduction per premium, 5y",0.9081667807591562

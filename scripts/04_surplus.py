@@ -31,7 +31,7 @@ _spec.loader.exec_module(step3)
 def main() -> None:
     ctx = build()
     ports = step3.portfolios(ctx)
-    hw, paths, r_dyn = ctx.liability()
+    hw, paths, r_dyn = ctx.liability(keep_detail=True)
     _, _, r_nod = ctx.liability(asm=ctx.asm.but(dynamic="none"))
 
     dist = pd.DataFrame({"path": np.arange(len(r_dyn.pv))})
@@ -59,10 +59,17 @@ def main() -> None:
     eff = dist["effective_match__dynamic"].to_numpy()
     worst_eff = np.argsort(eff)[:5]
     q10 = ctx.times <= 10 + 1e-9
+    # on those paths, the share of starting account value whose minimum rate is binding
+    # at year 15 (minimum rate at or above book yield less the pricing spread)
+    k15 = int(round(15 / (ctx.times[1] - ctx.times[0])))
+    uncapped = r_dyn.detail["book"][worst_eff, k15] - ctx.asm.pricing_spread
+    at_floor = [ctx.mp.av[ctx.mp.gmir >= u].sum() / ctx.av0 for u in uncapped]
     save(pd.DataFrame([{
         "share_negative_within_10y": float((short[:, q10].min(axis=1) < 0).mean()),
         "share_negative_within_30y": float((short.min(axis=1) < 0).mean()),
         "effective_match_worst5_negative_within_10y": int((short[worst_eff][:, q10].min(axis=1) < 0).sum()),
+        "effective_match_worst5_av_at_floor_y15_min": float(min(at_floor)),
+        "effective_match_worst5_av_at_floor_y15_max": float(max(at_floor)),
     }]), "04_negative_rates.csv")
     ve = pd.DataFrame(rows)
     save(ve, "04_var_es.csv")

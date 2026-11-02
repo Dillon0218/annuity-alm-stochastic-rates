@@ -116,6 +116,9 @@ def main() -> None:
         "paths with a negative 3m rate within 10y": neg.share_negative_within_10y,
         "paths with a negative 3m rate within 30y": neg.share_negative_within_30y,
         "effective match worst 5 with negative rates within 10y": neg.effective_match_worst5_negative_within_10y,
+        "effective match worst 5, AV at minimum rate in year 15, min": neg.effective_match_worst5_av_at_floor_y15_min,
+        "effective match worst 5, AV at minimum rate in year 15, max": neg.effective_match_worst5_av_at_floor_y15_max,
+        "30y discount factor sampling error, 1,000 raw paths (bp of price)": mt.set_index("maturity").loc[30, "stderr_bp_of_price"],
         "hedge alternatives: ES reduction per premium, 2y": load("05_hedge_alternatives.csv").iloc[0].es_reduction_per_premium,
         "hedge alternatives: ES reduction per premium, 5y": load("05_hedge_alternatives.csv").iloc[3].es_reduction_per_premium,
     }
